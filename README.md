@@ -1,27 +1,41 @@
-# AngularMaterialFileupload
+# AngularMaterialFileupload (Custom Libarary)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
-## Development server
+# Custom Libarary Project commands
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Create Application:
 
-## Code scaffolding
+`ng new angular-material-fileupload --no-create-application`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Generate Library
 
-## Build
+`ng generate library angular-material-fileupload`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Build from Root Project Application
 
-## Running unit tests
+`ng build`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Link repo in development
 
-## Running end-to-end tests
+`cd dist\angular-material-fileupload && npm link && cd ../..`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Continuous Development: Run from root project application
 
-## Further help
+`ng build angular-material-fileupload --watch`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Link to use library in other project
+
+## From root project application
+
+`npm link angular-material-fileupload`
+
+## preserveSymlinks configuration
+
+angular.json:: architect => build => options => `preserveSymlinks: true`
+
+# REFERENCES
+
+https://github.com/nishantmc/angular-material-fileupload#readme
+https://nishantmc.github.io/angular-material-fileupload.github.io/components/MatFileUploadQueueComponent.html#source
+https://medium.com/@prajramesh93/create-your-angular-library-f2cf273fd8a5

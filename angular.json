@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "angular-material-fileupload": {
+      "projectType": "library",
+      "root": "projects/angular-material-fileupload",
+      "sourceRoot": "projects/angular-material-fileupload/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angular-material-fileupload/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-material-fileupload/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angular-material-fileupload/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-material-fileupload/src/test.ts",
+            "tsConfig": "projects/angular-material-fileupload/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-material-fileupload/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-material-fileupload"
 }
